@@ -37,7 +37,7 @@ class DeliveryTest {
         $("[data-test-id='agreement']").click();
         $(byText("Забронировать")).click();
         $("[data-test-id='notification']").shouldBe(Condition.visible, Duration.ofSeconds(15));
-        $("[data-test-id='notification']").shouldHave(Condition.text("Встреча успешно забронирована на " + $("[data-test-id='date'] .input__control").text()));
+        $("[data-test-id='notification']").shouldHave(Condition.text("Встреча успешно забронирована на " + addDays(3)));
     }
 
     @Test
